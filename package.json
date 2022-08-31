@@ -1,6 +1,16 @@
 {
+  "name": "hardhat-smartcontract-lottery-fcc",
+  "version": "1.0.0",
+  "description": "",
+ "scripts": {
+    "test": "yarn hardhat test",
+    "test-staging": "yarn hardhat test --network rinkeby",
+    "lint": "yarn solhint 'contracts/*.sol'",
+    "lint:fix": "yarn solhint 'contracts/**/*.sol' --fix",
+    "format": "yarn prettier --write .",
+    "coverage": "yarn hardhat coverage"
+  },
   "devDependencies": {
-    "@chainlink/contracts": "^0.4.2",
     "@nomicfoundation/hardhat-chai-matchers": "^1.0.3",
     "@nomicfoundation/hardhat-network-helpers": "^1.0.4",
     "@nomicfoundation/hardhat-toolbox": "^1.0.2",
@@ -11,7 +21,6 @@
     "@typechain/hardhat": "^6.1.2",
     "@types/mocha": "^9.1.1",
     "chai": "^4.3.6",
-    "dotenv": "^16.0.1",
     "ethers": "^5.7.0",
     "hardhat": "^2.10.2",
     "hardhat-contract-sizer": "^2.6.1",
@@ -25,7 +34,9 @@
     "typechain": "^8.1.0"
   },
   "dependencies": {
+    "@chainlink/contracts": "^0.4.2",
     "global": "^4.4.0",
-    "hardhat-shorthand": "^1.0.0"
+    "hardhat-shorthand": "^1.0.0",
+    "dotenv": "^16.0.1"
   }
 }
