@@ -1,5 +1,5 @@
 require("@nomicfoundation/hardhat-toolbox")
-require("@nomiclabs/hardhat-waffle")
+//require("@nomiclabs/hardhat-waffle")
 require("@nomiclabs/hardhat-etherscan")
 require("hardhat-deploy")
 require("solidity-coverage")
@@ -86,6 +86,7 @@ module.exports = {
             rinkeby: ETHERSCAN_API_KEY,
             kovan: ETHERSCAN_API_KEY,
             polygon: POLYGONSCAN_API_KEY,
+            goerli: ETHERSCAN_API_KEY,
         },
     },
     gasReporter: {
@@ -97,7 +98,7 @@ module.exports = {
     },
     contractSizer: {
         runOnCompile: false,
-        only: ["Raffle"],
+        only: ["Lottery"],
     },
     namedAccounts: {
         deployer: {
