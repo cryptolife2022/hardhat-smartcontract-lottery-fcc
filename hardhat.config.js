@@ -35,11 +35,15 @@ module.exports = {
     defaultNetwork: "hardhat",
     networks: {
         hardhat: {
-            // // If you want to do some forking, uncomment this
-            // forking: {
-            //   url: MAINNET_RPC_URL
-            // }
-            chainId: 31337,
+            // If you want to do some forking, uncomment this
+            // Don't forget to set your Metamask Wallet Hardhat Chain to point to ChainId(1)
+            // Update your server side rendering to set Hardhat connector to ChainId(1), remove Mainnet as well!
+            forking: {
+                url: MAINNET_RPC_URL,
+            },
+            //chainId: 31337,
+            // If you want to do some forking, uncomment this
+            chainId: 1,
             blockConfirmations: 1,
         },
         localhost: {
