@@ -36,14 +36,15 @@ module.exports = {
     networks: {
         hardhat: {
             // If you want to do some forking, uncomment this
-            // Don't forget to set your Metamask Wallet Hardhat Chain to point to ChainId(1)
-            // Update your server side rendering to set Hardhat connector to ChainId(1), remove Mainnet as well!
-            forking: {
-                url: MAINNET_RPC_URL,
-            },
-            //chainId: 31337,
+            // 1. Don't forget to set your Metamask Wallet Hardhat Chain to point to ChainId(1)
+            // 2. Update your server side rendering to set Hardhat connector to ChainId(1), remove Mainnet as well!
+            // 3. Update contractAddresses.json on frontend to include mainnet Lottery Contract Object (duplicating Hardhat)
+            //forking: {
+            //    url: MAINNET_RPC_URL,
+            //},
+            chainId: 31337,
             // If you want to do some forking, uncomment this
-            chainId: 1,
+            //chainId: 1,
             blockConfirmations: 1,
         },
         localhost: {
